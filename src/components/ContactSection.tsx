@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { PHONE_DISPLAY, PHONE_TEL, SERVICES } from "@/lib/site";
+import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_TEL, SERVICES } from "@/lib/site";
 import { CheckIcon, PhoneIcon, PinIcon, HomeIcon } from "./icons";
 import Reveal from "./Reveal";
 
@@ -11,35 +11,29 @@ export default function ContactSection() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    setStatus("loading");
-    setErrorMsg("");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: data.get("name"),
-          phone: data.get("phone"),
-          service: data.get("service"),
-          message: data.get("message"),
-        }),
-      });
-      const json = (await res.json()) as { ok: boolean; error?: string };
-      if (!res.ok || !json.ok) {
-        setStatus("error");
-        setErrorMsg(json.error ?? "تعذر إرسال الطلب، حاول مرة أخرى.");
-        return;
-      }
-      setStatus("success");
-      form.reset();
-    } catch {
-      setStatus("error");
-      setErrorMsg("تعذر إرسال الطلب، تأكد من اتصالك بالإنترنت أو اتصل بنا مباشرة.");
-    }
+    const name = String(data.get("name") ?? "").trim();
+    const phone = String(data.get("phone") ?? "").trim();
+    const service = String(data.get("service") ?? "").trim();
+    const message = String(data.get("message") ?? "").trim();
+
+    const whatsappMessage = [
+      "السلام عليكم، أرغب في طلب خدمة من المسعودي.",
+      "",
+      `الاسم: ${name}`,
+      `رقم الجوال: ${phone}`,
+      `الخدمة المطلوبة: ${service}`,
+      `التفاصيل: ${message || "لا توجد تفاصيل إضافية"}`,
+    ].join("\n");
+
+    const whatsappUrl = `${WHATSAPP_TEL}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+    setStatus("success");
+    form.reset();
   }
 
   const inputCls =
