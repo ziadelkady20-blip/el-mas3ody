@@ -1,0 +1,111 @@
+import Image from "next/image";
+import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
+import { CheckIcon, DropIcon, LeafIcon, PhoneIcon, PinIcon } from "./icons";
+import Reveal from "./Reveal";
+
+const HIGHLIGHTS = [
+  "تنظيف وتعقيم الخزانات",
+  "رش المبيدات الحشرية",
+  "حل انسداد الصرف مع الضمان",
+];
+
+export default function Hero() {
+  return (
+    <section id="home" className="relative overflow-hidden pt-28 md:pt-36">
+      {/* Decorative background */}
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
+        <div className="absolute top-40 -right-32 h-96 w-96 rounded-full bg-brand/6 blur-3xl" />
+        <LeafIcon className="absolute top-32 left-[8%] hidden h-10 w-10 text-accent/40 lg:block animate-float" />
+        <DropIcon className="absolute bottom-24 left-[42%] hidden h-8 w-8 text-brand/20 lg:block" />
+      </div>
+
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 sm:px-6 md:pb-24 lg:grid-cols-2 lg:gap-10 lg:px-8">
+        {/* Copy */}
+        <Reveal className="text-center lg:text-right">
+          <span className="inline-flex items-center gap-2 rounded-full border border-beige bg-cream-soft px-4 py-1.5 text-sm font-semibold text-brand">
+            <PinIcon className="h-4 w-4 text-accent" />
+            نخدم مدينة الرياض
+          </span>
+
+          <h1 className="mt-5 text-4xl font-bold leading-[1.25] text-brand md:text-5xl xl:text-[3.4rem]">
+            المسعودي
+            <span className="mt-2 block text-[1.55rem] font-semibold leading-snug text-brand-ink/90 md:text-3xl xl:text-[2.1rem]">
+              حلول متكاملة لنظافة وصيانة منزلك
+            </span>
+          </h1>
+
+          <p className="mx-auto mt-5 max-w-xl text-base leading-8 text-brand-ink/75 md:text-lg lg:mx-0">
+            خدمات تنظيف وتعقيم وصيانة متخصصة بجودة عالية لنمنحك بيئة أنظف
+            وأكثر راحة وأمانًا في الرياض.
+          </p>
+
+          <ul className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 lg:justify-start">
+            {HIGHLIGHTS.map((item) => (
+              <li key={item} className="flex items-center gap-1.5 text-sm font-medium text-brand">
+                <CheckIcon className="h-4 w-4 shrink-0 text-accent" />
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+            <a
+              href="#contact"
+              className="w-full rounded-full bg-brand px-8 py-3.5 text-center text-base font-bold text-cream shadow-card transition-all hover:-translate-y-0.5 hover:bg-brand-deep hover:shadow-lift sm:w-auto"
+            >
+              اطلب خدمتك الآن
+            </a>
+            <a
+              href={PHONE_TEL}
+              className="flex w-full items-center justify-center gap-2 rounded-full border-2 border-brand/20 bg-cream-soft px-7 py-3 text-base font-bold text-brand transition-colors hover:border-brand/50 sm:w-auto"
+            >
+              <PhoneIcon className="h-5 w-5 text-accent" />
+              اتصل بنا
+              <span dir="ltr" className="tracking-wide">{PHONE_DISPLAY}</span>
+            </a>
+          </div>
+        </Reveal>
+
+        {/* Visual */}
+        <Reveal delay={150} className="relative mx-auto w-full max-w-xl lg:max-w-none">
+          <div className="relative">
+            <div
+              aria-hidden
+              className="absolute -bottom-4 -right-4 h-full w-full rounded-[2rem] border-2 border-beige"
+            />
+            <div className="relative overflow-hidden rounded-[2rem] shadow-lift">
+              <Image
+                src="/images/hero.jpg"
+                alt="فني من فريق المسعودي لخدمات التنظيف والصيانة في الرياض"
+                width={1200}
+                height={900}
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="h-auto w-full object-cover"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-gradient-to-t from-brand-deep/25 via-transparent to-transparent"
+              />
+            </div>
+
+            {/* Floating card */}
+            <div className="absolute -bottom-6 right-4 flex items-center gap-3 rounded-2xl bg-cream-soft/95 px-5 py-3.5 shadow-lift backdrop-blur md:right-8">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand text-cream">
+                <DropIcon className="h-5.5 w-5.5" />
+              </span>
+              <div>
+                <p className="text-sm font-bold text-brand">نظافة · تعقيم · صيانة</p>
+                <p className="text-xs text-brand-ink/60">خدمة احترافية داخل الرياض</p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+
+      {/* Beige separator */}
+      <div aria-hidden className="mx-auto h-px max-w-7xl bg-beige/70" />
+    </section>
+  );
+}
