@@ -1,5 +1,6 @@
 export const PHONE_DISPLAY = "0507072077";
-export const PHONE_TEL = "https://wa.me/966507072077";
+export const PHONE_TEL = "tel:0507072077";
+export const WHATSAPP_TEL = "https://wa.me/966507072077";
 
 export const NAV_LINKS = [
   { href: "#home", label: "الرئيسية" },
