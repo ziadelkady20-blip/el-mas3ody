@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { NAV_LINKS, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 import { CloseIcon, MenuIcon, PhoneIcon } from "./icons";
@@ -32,20 +31,8 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2.5 sm:px-6 lg:px-8">
-        {/* Logo */}
-        <a href="#home" className="group flex h-14 w-[118px] shrink-0 items-center justify-center overflow-hidden" aria-label="المسعودي — الصفحة الرئيسية">
-          <Image
-            src="/images/logo.png"
-            alt="شعار المسعودي"
-            width={632}
-            height={483}
-            priority
-            className={`brand-logo h-[90px] w-[118px] max-w-none object-cover object-center transition-transform duration-300 ${scrolled ? "scale-[1.18]" : "scale-[1.24]"}`}
-          />
-        </a>
-
         {/* Desktop nav */}
-        <nav aria-label="التنقل الرئيسي" className="hidden lg:block">
+        <nav aria-label="التنقل الرئيسي" className="hidden lg:absolute lg:left-1/2 lg:block lg:-translate-x-1/2">
           <ul className="flex items-center gap-1">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
