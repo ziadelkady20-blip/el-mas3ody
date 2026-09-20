@@ -27,8 +27,8 @@ export default function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-cream/95 shadow-soft backdrop-blur-md"
-          : "bg-cream/70 backdrop-blur-sm"
+          ? "bg-cream shadow-soft"
+          : "bg-cream"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2.5 sm:px-6 lg:px-8">
@@ -40,7 +40,7 @@ export default function Header() {
             width={632}
             height={483}
             priority
-            className={`brand-logo w-auto object-contain transition-all duration-300 ${scrolled ? "h-11 md:h-12" : "h-12 md:h-14"}`}
+            className={`brand-logo h-auto w-[150px] object-contain transition-all duration-300 ${scrolled ? "max-h-11 md:max-h-12" : "max-h-12 md:max-h-14"}`}
           />
         </a>
 
