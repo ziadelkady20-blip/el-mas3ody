@@ -33,14 +33,14 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2.5 sm:px-6 lg:px-8">
         {/* Logo */}
-        <a href="#home" className="flex shrink-0 items-center gap-2" aria-label="المسعودي — الصفحة الرئيسية">
+        <a href="#home" className="group flex shrink-0 items-center gap-2" aria-label="المسعودي — الصفحة الرئيسية">
           <Image
             src="/images/logo.png"
             alt="شعار المسعودي"
             width={632}
             height={483}
             priority
-            className={`w-auto transition-all duration-300 ${scrolled ? "h-12 md:h-14" : "h-14 md:h-16"}`}
+            className={`brand-logo w-auto object-contain transition-all duration-300 ${scrolled ? "h-11 md:h-12" : "h-12 md:h-14"}`}
           />
         </a>
 
