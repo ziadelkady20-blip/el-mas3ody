@@ -20,7 +20,7 @@ export default function Hero() {
         <DropIcon className="absolute bottom-24 left-[42%] hidden h-8 w-8 text-brand/20 lg:block" />
       </div>
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 sm:px-6 md:pb-24 lg:grid-cols-2 lg:gap-10 lg:px-8">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 pb-16 sm:px-6 md:pb-24 lg:grid-cols-2 lg:gap-10 lg:px-8">
         {/* Copy */}
         <Reveal className="text-center lg:text-right">
           <span className="inline-flex items-center gap-2 rounded-full border border-beige bg-cream-soft px-4 py-1.5 text-sm font-semibold text-brand">
@@ -28,11 +28,19 @@ export default function Hero() {
             نخدم مدينة الرياض
           </span>
 
-          <h1 className="mt-5 text-4xl font-bold leading-[1.25] text-brand md:text-5xl xl:text-[3.4rem]">
-            المسعودي
-            <span className="mt-2 block text-[1.55rem] font-semibold leading-snug text-brand-ink/90 md:text-3xl xl:text-[2.1rem]">
-              حلول متكاملة لنظافة وصيانة منزلك
-            </span>
+          <div className="mb-2 flex justify-center lg:justify-start">
+            <Image
+              src="/images/logo.png"
+              alt="شعار المسعودي"
+              width={632}
+              height={483}
+              priority
+              className="h-auto w-[230px] object-contain mix-blend-multiply sm:w-[260px] md:w-[285px]"
+            />
+          </div>
+
+          <h1 className="mt-1 text-3xl font-bold leading-[1.3] text-brand md:text-4xl xl:text-[2.55rem]">
+            حلول متكاملة لنظافة وصيانة منزلك
           </h1>
 
           <p className="mx-auto mt-5 max-w-xl text-base leading-8 text-brand-ink/75 md:text-lg lg:mx-0">
