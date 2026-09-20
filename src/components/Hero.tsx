@@ -1,4 +1,5 @@
 import Image from "next/image";
+import BrandLogo from "./BrandLogo";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 import { CheckIcon, DropIcon, LeafIcon, PhoneIcon, PinIcon } from "./icons";
 import Reveal from "./Reveal";
@@ -30,14 +31,7 @@ export default function Hero() {
 
           <div className="relative mb-3 flex justify-center lg:justify-start">
             <div aria-hidden className="absolute inset-x-4 top-1/2 -z-10 h-24 -translate-y-1/2 rounded-full bg-accent/8 blur-2xl" />
-            <Image
-              src="/images/logo.png"
-              alt="شعار المسعودي — لخدمات التنظيف والصيانة والعزل"
-              width={632}
-              height={483}
-              priority
-              className="h-auto w-[250px] object-contain mix-blend-multiply sm:w-[290px] md:w-[320px]"
-            />
+            <BrandLogo className="h-auto w-[250px] sm:w-[290px] md:w-[320px]" priority />
           </div>
 
           <h1 className="mt-1 text-3xl font-bold leading-[1.3] text-brand md:text-4xl xl:text-[2.55rem]">
