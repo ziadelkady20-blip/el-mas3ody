@@ -39,9 +39,9 @@ export default function Header() {
           : "bg-[#F8F3E6]"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-2 sm:px-6 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-6 lg:px-8">
+      <div className="relative mx-auto flex max-w-7xl items-center justify-center gap-4 px-4 py-2 sm:px-6 lg:px-8">
         {/* Desktop actions */}
-        <div className="hidden items-center justify-self-start gap-2 lg:flex">
+        <div className="hidden items-center gap-2 lg:absolute lg:left-8 lg:top-1/2 lg:flex lg:-translate-y-1/2">
           <a
             href="#contact"
             className="rounded-full bg-brand px-5 py-2.5 text-[15px] font-bold text-cream shadow-card transition-all hover:-translate-y-0.5 hover:bg-brand-deep hover:shadow-lift"
@@ -81,8 +81,6 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-
-        <div className="hidden lg:block" aria-hidden="true" />
 
         {/* Mobile actions */}
         <div className="flex items-center gap-2 lg:hidden">
