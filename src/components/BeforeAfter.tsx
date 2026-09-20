@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Reveal from "./Reveal";
 
-const COMPARISON_IMAGE = "/images/before-after.webp";
+const COMPARISON_IMAGE = "/images/before-after.jpg";
 
 export default function BeforeAfter() {
   const [pos, setPos] = useState(50);
@@ -28,7 +28,7 @@ export default function BeforeAfter() {
               src={COMPARISON_IMAGE}
               alt="مقارنة قبل وبعد تنظيف وغسيل الكنب"
               draggable={false}
-              className="absolute inset-0 h-full w-full object-contain"
+              className="absolute inset-0 h-full w-full object-cover"
             />
 
             <div
