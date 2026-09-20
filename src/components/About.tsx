@@ -46,7 +46,7 @@ export default function About() {
           />
           <div className="relative overflow-hidden rounded-[2rem] shadow-lift">
             <Image
-              src="/images/service-floor.jpg"
+              src="/images/image 6.png"
               alt="فريق المسعودي أثناء تنفيذ خدمات النظافة داخل أحد المنازل بالرياض"
               width={1200}
               height={800}
