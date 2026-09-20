@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { NAV_LINKS, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 import { CloseIcon, MenuIcon, PhoneIcon } from "./icons";
+import BrandLogo from "./BrandLogo";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -33,14 +33,7 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 sm:px-6 lg:px-8">
         <a href="#home" aria-label="المسعودي — الصفحة الرئيسية" className="relative z-10 flex h-16 w-[185px] shrink-0 items-center">
-          <Image
-            src="/images/logo.png"
-            alt="المسعودي — لخدمات التنظيف والصيانة والعزل"
-            width={632}
-            height={483}
-            priority
-            className="h-full w-full object-contain mix-blend-multiply"
-          />
+          <BrandLogo className="h-full w-full" priority />
         </a>
         {/* Desktop nav */}
         <nav aria-label="التنقل الرئيسي" className="hidden lg:absolute lg:left-1/2 lg:block lg:-translate-x-1/2">
