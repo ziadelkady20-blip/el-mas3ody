@@ -39,10 +39,9 @@ export default function Header() {
           : "bg-[#F8F3E6]"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 sm:px-6 lg:px-8">
-        <div className="h-16 w-[185px] shrink-0" aria-hidden="true" />
-        {/* Desktop nav */}
-        <nav aria-label="التنقل الرئيسي" className="hidden lg:absolute lg:left-1/2 lg:block lg:-translate-x-1/2">
+      <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-2 sm:px-6 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-6 lg:px-8">
+        {/* Desktop actions */}
+        <div className="hidden items-center justify-self-start gap-2 lg:flex">
           <ul className="flex items-center gap-1">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
@@ -57,34 +56,49 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Desktop phone + CTA */}
-        <div className="hidden items-center gap-3 lg:flex">
-          <a
-            href={WHATSAPP_TEL}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="تواصل معنا عبر واتساب"
-            className="group flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2 text-white shadow-card transition-all hover:-translate-y-0.5 hover:brightness-95"
-          >
-            <WhatsAppIcon className="h-4.5 w-4.5" />
-            <span className="text-[15px] font-bold">واتساب</span>
-          </a>
-          <a
-            href={PHONE_TEL}
-            className="group flex items-center gap-2 rounded-full border border-beige bg-cream-soft px-4 py-2 text-brand transition-colors hover:border-brand/40"
-          >
-            <PhoneIcon className="h-4.5 w-4.5 text-accent transition-transform group-hover:-rotate-12" />
-            <span dir="ltr" className="text-[15px] font-bold tracking-wide">
-              {PHONE_DISPLAY}
-            </span>
-          </a>
+        {/* Desktop actions */}
+        <div className="hidden items-center justify-self-start gap-2 lg:flex">
           <a
             href="#contact"
             className="rounded-full bg-brand px-5 py-2.5 text-[15px] font-bold text-cream shadow-card transition-all hover:-translate-y-0.5 hover:bg-brand-deep hover:shadow-lift"
           >
             اطلب خدمتك الآن
           </a>
+          <a
+            href={PHONE_TEL}
+            className="group flex items-center gap-2 rounded-full border border-beige bg-cream-soft px-4 py-2.5 text-brand transition-all hover:border-brand/40 hover:bg-white"
+          >
+            <PhoneIcon className="h-4.5 w-4.5 text-accent transition-transform group-hover:-rotate-12" />
+            <span dir="ltr" className="text-[15px] font-bold tracking-wide">{PHONE_DISPLAY}</span>
+          </a>
+          <a
+            href={WHATSAPP_TEL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="تواصل معنا عبر واتساب"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] text-white shadow-card transition-all hover:-translate-y-0.5 hover:brightness-95"
+          >
+            <WhatsAppIcon className="h-5 w-5" />
+          </a>
         </div>
+
+        {/* Desktop nav */}
+        <nav aria-label="التنقل الرئيسي" className="hidden items-center justify-self-center lg:flex">
+          <ul className="flex items-center gap-0.5 rounded-full border border-beige/60 bg-cream/70 px-1.5 py-1 shadow-sm">
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className="block rounded-full px-4 py-2 text-[15px] font-medium text-brand transition-all hover:bg-white hover:text-brand-deep"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="hidden lg:block" aria-hidden="true" />
 
         {/* Mobile actions */}
         <div className="flex items-center gap-2 lg:hidden">
