@@ -128,5 +128,5 @@ body {
 /* Integrated brand mark: blends the light logo canvas into the site surface. */
 .brand-logo {
   mix-blend-mode: multiply;
-  filter: drop-shadow(0 6px 12px rgb(27 94 63 / 0.08));
+  filter: contrast(1.04) saturate(1.03) drop-shadow(0 5px 10px rgb(27 94 63 / 0.07));
 }
