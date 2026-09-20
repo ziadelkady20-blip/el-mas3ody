@@ -42,22 +42,6 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-2 sm:px-6 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-6 lg:px-8">
         {/* Desktop actions */}
         <div className="hidden items-center justify-self-start gap-2 lg:flex">
-          <ul className="flex items-center gap-1">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="rounded-full px-4 py-2 text-[15px] font-medium text-brand transition-colors hover:bg-brand/8 hover:text-brand-deep"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        {/* Desktop actions */}
-        <div className="hidden items-center justify-self-start gap-2 lg:flex">
           <a
             href="#contact"
             className="rounded-full bg-brand px-5 py-2.5 text-[15px] font-bold text-cream shadow-card transition-all hover:-translate-y-0.5 hover:bg-brand-deep hover:shadow-lift"
