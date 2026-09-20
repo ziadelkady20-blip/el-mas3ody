@@ -15,52 +15,51 @@ export default function BeforeAfter() {
           <span className="text-sm font-bold tracking-widest text-accent">النتيجة</span>
           <h2 className="mt-3 text-3xl font-bold text-brand md:text-4xl">قبل وبعد</h2>
           <p className="mt-4 text-base leading-8 text-brand-ink/70">
-            حرّك المؤشر يمينًا ويسارًا وشاهد الفرق بين الحالة قبل التنظيف وبعده.
+            اسحب المؤشر يمينًا ويسارًا وشاهد الفرق بين الحالة قبل التنظيف وبعده.
           </p>
         </Reveal>
 
-        <Reveal delay={100} className="mx-auto mt-10 max-w-4xl">
+        <Reveal delay={100} className="mx-auto mt-10 max-w-5xl">
           <div
             dir="ltr"
-            className="relative aspect-[16/10] select-none overflow-hidden rounded-[1.75rem] bg-brand/5 shadow-lift md:aspect-[16/8]"
+            className="relative aspect-[3/2] select-none overflow-hidden rounded-[2rem] bg-brand/5 shadow-lift"
           >
-            {/* Before — the generated image's left half expanded across the frame */}
-            <div
-              aria-label="قبل التنظيف"
-              className="absolute inset-0 bg-cover bg-left"
-              style={{
-                backgroundImage: `url("${COMPARISON_IMAGE}")`,
-                backgroundSize: "200% 100%",
-              }}
+            <img
+              src={COMPARISON_IMAGE}
+              alt="مقارنة قبل وبعد تنظيف وغسيل الكنب"
+              draggable={false}
+              className="absolute inset-0 h-full w-full object-cover"
             />
 
-            {/* After — the generated image's right half expanded across the frame */}
             <div
-              aria-label="بعد التنظيف"
-              className="absolute inset-0 bg-cover bg-right"
-              style={{
-                backgroundImage: `url("${COMPARISON_IMAGE}")`,
-                backgroundSize: "200% 100%",
-                clipPath: `inset(0 0 0 ${pos}%)`,
-              }}
-            />
+              className="absolute inset-0 overflow-hidden"
+              style={{ clipPath: `inset(0 0 0 ${pos}%)` }}
+              aria-hidden
+            >
+              <img
+                src={COMPARISON_IMAGE}
+                alt=""
+                draggable={false}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
 
             <div
               aria-hidden
-              className="absolute inset-y-0 w-0.5 bg-cream shadow-[0_0_12px_rgb(0_0_0/0.35)]"
+              className="pointer-events-none absolute inset-y-0 z-20 w-px bg-white/95 shadow-[0_0_14px_rgb(0_0_0/0.28)]"
               style={{ left: `${pos}%` }}
             >
-              <span className="absolute top-1/2 left-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-cream bg-brand text-cream shadow-lift">
+              <span className="absolute top-1/2 left-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white bg-brand text-white shadow-lift">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="h-5 w-5">
                   <path d="M8.5 8 4.5 12l4 4M15.5 8l4 4-4 4" />
                 </svg>
               </span>
             </div>
 
-            <span className="absolute top-4 left-4 rounded-full bg-brand-deep/85 px-4 py-1.5 text-sm font-bold text-cream backdrop-blur">
+            <span className="pointer-events-none absolute top-5 left-5 z-20 rounded-full bg-brand-deep/90 px-4 py-1.5 text-sm font-bold text-cream shadow-sm">
               قبل
             </span>
-            <span className="absolute top-4 right-4 rounded-full bg-accent/90 px-4 py-1.5 text-sm font-bold text-brand-ink backdrop-blur">
+            <span className="pointer-events-none absolute top-5 right-5 z-20 rounded-full bg-accent/95 px-4 py-1.5 text-sm font-bold text-brand-ink shadow-sm">
               بعد
             </span>
 
@@ -71,7 +70,7 @@ export default function BeforeAfter() {
               value={pos}
               onChange={(e) => setPos(Number(e.target.value))}
               aria-label="اسحب للمقارنة بين قبل وبعد التنظيف"
-              className="ba-range absolute inset-0 z-10 h-full w-full cursor-ew-resize opacity-0"
+              className="ba-range absolute inset-0 z-30 h-full w-full cursor-ew-resize opacity-0"
             />
           </div>
 
