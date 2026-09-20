@@ -1,4 +1,4 @@
-import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
+import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_TEL } from "@/lib/site";
 import { DropIcon, LeafIcon, PhoneIcon, SparkleIcon } from "./icons";
 import Reveal from "./Reveal";
 
@@ -30,13 +30,25 @@ export default function CtaSection() {
             >
               اطلب خدمتك الآن
             </a>
-            <a
-              href={PHONE_TEL}
-              className="flex w-full items-center justify-center gap-2.5 rounded-full border-2 border-cream/30 px-8 py-3 text-base font-bold text-cream transition-colors hover:border-cream/70 sm:w-auto"
-            >
-              <PhoneIcon className="h-5 w-5 text-accent" />
-              <span dir="ltr" className="text-lg tracking-wider">{PHONE_DISPLAY}</span>
-            </a>
+            <div className="flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row">
+              <a
+                href={PHONE_TEL}
+                className="flex w-full items-center justify-center gap-2.5 rounded-full border-2 border-cream/30 px-8 py-3 text-base font-bold text-cream transition-colors hover:border-cream/70 sm:w-auto"
+              >
+                <PhoneIcon className="h-5 w-5 text-accent" />
+                <span dir="ltr" className="text-lg tracking-wider">{PHONE_DISPLAY}</span>
+              </a>
+              <a
+                href={WHATSAPP_TEL}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="تواصل معنا عبر واتساب"
+                className="flex w-full items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-8 py-3 text-base font-bold text-white shadow-card transition-all hover:-translate-y-0.5 hover:brightness-105 sm:w-auto"
+              >
+                <span aria-hidden className="text-xl leading-none">◉</span>
+                <span>واتساب</span>
+              </a>
+            </div>
           </div>
         </div>
       </Reveal>
