@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { NAV_LINKS, PHONE_DISPLAY, PHONE_TEL, SERVICES } from "@/lib/site";
 import { PhoneIcon, PinIcon } from "./icons";
 
@@ -9,15 +8,6 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <div className="inline-block rounded-2xl bg-cream p-3">
-              <Image
-                src="/images/logo.png"
-                alt="شعار المسعودي"
-                width={632}
-                height={483}
-                className="h-16 w-auto"
-              />
-            </div>
             <p className="mt-4 max-w-xs text-sm leading-7 text-cream/75">
               المسعودي لخدمات التنظيف والصيانة والعزل — خدمة احترافية لنظافة
               وصيانة منزلك في الرياض.
