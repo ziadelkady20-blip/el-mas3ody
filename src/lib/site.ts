@@ -46,7 +46,7 @@ export const SERVICES: ServiceItem[] = [
     shortTitle: "رش المبيدات",
     description:
       "مكافحة الحشرات برش مبيدات متخصصة وبأسلوب احترافي يراعي سلامة المنزل وسكانه، مع تغطية دقيقة لأماكن انتشار الحشرات.",
-    image: "/images/service-pest.jpg",
+    image: "https://raw.githubusercontent.com/ziadelkady20-blip/el-mas3ody/main/images/image%202.png?v=b211cf83",
     imageAlt: "فني مكافحة حشرات يقوم برش المبيدات داخل منزل بالرياض",
     icon: "pest",
   },
@@ -63,7 +63,7 @@ export const SERVICES: ServiceItem[] = [
       "إزالة الروائح الكريهة",
       "مع الضمان",
     ],
-    image: "/images/service-drain.jpg",
+    image: "https://raw.githubusercontent.com/ziadelkady20-blip/el-mas3ody/main/images/image%203.png?v=c8f30ce4",
     imageAlt: "فني يستخدم جهاز ضغط لتسليك وتعقيم مواسير الصرف الصحي",
     icon: "drain",
   },
@@ -74,7 +74,7 @@ export const SERVICES: ServiceItem[] = [
     shortTitle: "غسيل المجالس والكنب",
     description:
       "غسيل عميق للمجالس والكنب يعيد نظافتها ورونقها وانتعاشها، بأجهزة احترافية ومواد مناسبة لكل نوع من الأقمشة.",
-    image: "/images/service-sofa.jpg",
+    image: "https://raw.githubusercontent.com/ziadelkady20-blip/el-mas3ody/main/images/image%204.png?v=93865a9c",
     imageAlt: "غسيل وتنظيف عميق للمجالس والكنب بأجهزة بخار احترافية",
     icon: "sofa",
   },
@@ -85,7 +85,7 @@ export const SERVICES: ServiceItem[] = [
     shortTitle: "نظافة الأرضيات",
     description:
       "تنظيف احترافي لجميع أنواع الأرضيات يمنح منزلك مظهرًا أنظف وأكثر إشراقًا وبيئة صحية مريحة.",
-    image: "/images/service-floor.jpg",
+    image: "https://raw.githubusercontent.com/ziadelkady20-blip/el-mas3ody/main/images/image%205.png?v=4165daa4",
     imageAlt: "جلي وتنظيف أرضيات رخام بجهاز تلميع احترافي",
     icon: "floor",
   },
