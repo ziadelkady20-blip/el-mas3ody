@@ -87,6 +87,7 @@ export default function Header() {
         </div>
 
         {/* Mobile actions */}
+        <div className="flex items-center gap-2 lg:hidden">
           <a
             href={WHATSAPP_TEL}
             target="_blank"
@@ -96,8 +97,6 @@ export default function Header() {
           >
             <WhatsAppIcon className="h-5 w-5" />
           </a>
-
-        <div className="flex items-center gap-2 lg:hidden">
           <a
             href={PHONE_TEL}
             aria-label={`اتصل الآن ${PHONE_DISPLAY}`}
