@@ -27,20 +27,20 @@ export default function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-cream shadow-soft"
-          : "bg-cream"
+          ? "bg-[#F8F3E6] shadow-soft"
+          : "bg-[#F8F3E6]"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2.5 sm:px-6 lg:px-8">
         {/* Logo */}
-        <a href="#home" className="group flex shrink-0 items-center gap-2" aria-label="المسعودي — الصفحة الرئيسية">
+        <a href="#home" className="group flex h-14 w-[118px] shrink-0 items-center justify-center overflow-hidden" aria-label="المسعودي — الصفحة الرئيسية">
           <Image
             src="/images/logo.png"
             alt="شعار المسعودي"
             width={632}
             height={483}
             priority
-            className={`brand-logo h-auto w-[150px] object-contain transition-all duration-300 ${scrolled ? "max-h-11 md:max-h-12" : "max-h-12 md:max-h-14"}`}
+            className={`brand-logo h-[90px] w-[118px] max-w-none object-cover object-center transition-transform duration-300 ${scrolled ? "scale-[1.18]" : "scale-[1.24]"}`}
           />
         </a>
 
