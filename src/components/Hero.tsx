@@ -79,7 +79,7 @@ export default function Hero() {
             />
             <div className="relative overflow-hidden rounded-[2rem] shadow-lift">
               <Image
-                src="/images/hero.jpg"
+                src="/images/ChatGPT Image 20 سبتمبر 2026, 05_22_04 ص.png"
                 alt="فني من فريق المسعودي لخدمات التنظيف والصيانة في الرياض"
                 width={1200}
                 height={900}
@@ -93,16 +93,6 @@ export default function Hero() {
               />
             </div>
 
-            {/* Floating card */}
-            <div className="absolute -bottom-6 right-4 flex items-center gap-3 rounded-2xl bg-cream-soft/95 px-5 py-3.5 shadow-lift backdrop-blur md:right-8">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand text-cream">
-                <DropIcon className="h-5.5 w-5.5" />
-              </span>
-              <div>
-                <p className="text-sm font-bold text-brand">نظافة · تعقيم · صيانة</p>
-                <p className="text-xs text-brand-ink/60">خدمة احترافية داخل الرياض</p>
-              </div>
-            </div>
           </div>
         </Reveal>
       </div>
