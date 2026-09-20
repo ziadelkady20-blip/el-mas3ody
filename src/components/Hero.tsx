@@ -28,14 +28,15 @@ export default function Hero() {
             نخدم مدينة الرياض
           </span>
 
-          <div className="mb-2 flex justify-center lg:justify-start">
+          <div className="relative mb-3 flex justify-center lg:justify-start">
+            <div aria-hidden className="absolute inset-x-4 top-1/2 -z-10 h-24 -translate-y-1/2 rounded-full bg-accent/8 blur-2xl" />
             <Image
               src="/images/logo.png"
-              alt="شعار المسعودي"
+              alt="شعار المسعودي — لخدمات التنظيف والصيانة والعزل"
               width={632}
               height={483}
               priority
-              className="h-auto w-[230px] object-contain mix-blend-multiply sm:w-[260px] md:w-[285px]"
+              className="h-auto w-[250px] object-contain mix-blend-multiply sm:w-[290px] md:w-[320px]"
             />
           </div>
 
