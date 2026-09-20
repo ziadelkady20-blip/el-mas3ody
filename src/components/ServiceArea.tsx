@@ -1,4 +1,4 @@
-import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
+import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_TEL } from "@/lib/site";
 import { PhoneIcon, PinIcon } from "./icons";
 import Reveal from "./Reveal";
 
@@ -19,13 +19,25 @@ export default function ServiceArea() {
             <p className="relative mx-auto mt-4 max-w-xl text-base leading-8 text-brand-ink/75 md:text-lg">
               المسعودي يقدم خدمات التنظيف والصيانة المتخصصة داخل مدينة الرياض.
             </p>
-            <a
-              href={PHONE_TEL}
-              className="relative mt-7 inline-flex items-center gap-2.5 rounded-full border-2 border-brand/20 bg-cream px-7 py-3 text-base font-bold text-brand transition-colors hover:border-brand/50"
-            >
-              <PhoneIcon className="h-5 w-5 text-accent" />
-              <span dir="ltr" className="tracking-wide">{PHONE_DISPLAY}</span>
-            </a>
+            <div className="relative mt-7 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href={PHONE_TEL}
+                className="inline-flex items-center gap-2.5 rounded-full border-2 border-brand/20 bg-cream px-7 py-3 text-base font-bold text-brand transition-colors hover:border-brand/50"
+              >
+                <PhoneIcon className="h-5 w-5 text-accent" />
+                <span dir="ltr" className="tracking-wide">{PHONE_DISPLAY}</span>
+              </a>
+              <a
+                href={WHATSAPP_TEL}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="تواصل معنا عبر واتساب"
+                className="inline-flex items-center gap-2.5 rounded-full bg-[#25D366] px-7 py-3 text-base font-bold text-white shadow-card transition-transform hover:scale-[1.02]"
+              >
+                <span aria-hidden className="text-xl leading-none">◉</span>
+                <span>واتساب</span>
+              </a>
+            </div>
           </div>
         </Reveal>
       </div>
