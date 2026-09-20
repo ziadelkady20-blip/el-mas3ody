@@ -35,7 +35,7 @@ export const SERVICES: ServiceItem[] = [
       "تعقيم شامل بمواد آمنة",
       "صيانة ومعالجة الملاحظات",
     ],
-    image: "/images/service-tanks.jpg",
+    image: "/images/image 1.png",
     imageAlt: "فني متخصص يقوم بتنظيف وتعقيم خزان مياه علوي في الرياض",
     icon: "tank",
   },
