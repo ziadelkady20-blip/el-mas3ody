@@ -31,9 +31,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 sm:px-6 lg:px-8">
-        <a href="#home" aria-label="المسعودي — الصفحة الرئيسية" className="relative z-10 flex h-16 w-[185px] shrink-0 items-center">
-          <BrandLogo className="h-full w-full" priority />
-        </a>
+        <div className="h-16 w-[185px] shrink-0" aria-hidden="true" />
         {/* Desktop nav */}
         <nav aria-label="التنقل الرئيسي" className="hidden lg:absolute lg:left-1/2 lg:block lg:-translate-x-1/2">
           <ul className="flex items-center gap-1">
