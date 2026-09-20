@@ -74,7 +74,7 @@ export default function Services() {
                 alt={tanks.imageAlt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                className="bg-cream object-contain transition-transform duration-700 group-hover:scale-[1.02]"
               />
               <span className="absolute top-4 right-4 rounded-full bg-brand px-4 py-1.5 text-xs font-bold text-cream shadow-card">
                 الخدمة الأكثر طلبًا
