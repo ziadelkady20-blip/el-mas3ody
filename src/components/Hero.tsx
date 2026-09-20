@@ -79,7 +79,7 @@ export default function Hero() {
             />
             <div className="relative overflow-hidden rounded-[2rem] shadow-lift">
               <Image
-                src="/images/ChatGPT Image 20 سبتمبر 2026, 05_22_04 ص.png"
+                src="https://raw.githubusercontent.com/ziadelkady20-blip/el-mas3ody/main/images/ChatGPT%20Image%2020%20%D8%B3%D8%A8%D8%AA%D9%85%D8%A8%D8%B1%202026%2C%2005_22_04%20%D8%B5.png"
                 alt="فني من فريق المسعودي لخدمات التنظيف والصيانة في الرياض"
                 width={1200}
                 height={900}
