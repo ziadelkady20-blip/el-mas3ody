@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { NAV_LINKS, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 import { CloseIcon, MenuIcon, PhoneIcon } from "./icons";
-import BrandLogo from "./BrandLogo";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
