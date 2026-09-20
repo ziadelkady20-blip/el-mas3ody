@@ -1,5 +1,4 @@
 import About from "@/components/About";
-import BeforeAfter from "@/components/BeforeAfter";
 import ContactSection from "@/components/ContactSection";
 import CtaSection from "@/components/CtaSection";
 import FloatingCall from "@/components/FloatingCall";
@@ -21,7 +20,6 @@ export default function HomePage() {
         <Services />
         <WhyUs />
         <About />
-        <BeforeAfter />
         <Gallery />
         <HowItWorks />
         <ServiceArea />
