@@ -60,6 +60,16 @@ export default function Header() {
         {/* Desktop phone + CTA */}
         <div className="hidden items-center gap-3 lg:flex">
           <a
+            href={WHATSAPP_TEL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="تواصل معنا عبر واتساب"
+            className="group flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2 text-white shadow-card transition-all hover:-translate-y-0.5 hover:brightness-95"
+          >
+            <WhatsAppIcon className="h-4.5 w-4.5" />
+            <span className="text-[15px] font-bold">واتساب</span>
+          </a>
+          <a
             href={PHONE_TEL}
             className="group flex items-center gap-2 rounded-full border border-beige bg-cream-soft px-4 py-2 text-brand transition-colors hover:border-brand/40"
           >
@@ -77,6 +87,16 @@ export default function Header() {
         </div>
 
         {/* Mobile actions */}
+          <a
+            href={WHATSAPP_TEL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="واتساب"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white shadow-card"
+          >
+            <WhatsAppIcon className="h-5 w-5" />
+          </a>
+
         <div className="flex items-center gap-2 lg:hidden">
           <a
             href={PHONE_TEL}
@@ -126,6 +146,15 @@ export default function Header() {
               className="rounded-full bg-brand px-5 py-3 text-center text-base font-bold text-cream"
             >
               اطلب خدمتك الآن
+            </a>
+            <a
+              href={WHATSAPP_TEL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-white"
+            >
+              <WhatsAppIcon className="h-5 w-5" />
+              <span className="font-bold">تواصل عبر واتساب</span>
             </a>
             <a
               href={PHONE_TEL}
