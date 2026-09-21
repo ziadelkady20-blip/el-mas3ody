@@ -23,40 +23,8 @@ type GalleryItem = {
   tall?: boolean;
 };
 
-const ITEMS: GalleryItem[] = [
-  {
-    src: "/images/service-tanks.jpg",
-    alt: "تنظيف وتعقيم خزان مياه علوي بالرياض",
-    category: "الخزانات",
-    tall: true,
-  },
-  {
-    src: "/images/service-pest.jpg",
-    alt: "رش مبيدات حشرية داخل منزل بالرياض",
-    category: "المبيدات",
-  },
-  {
-    src: "/images/service-drain.jpg",
-    alt: "تسليك وتعقيم مواسير الصرف بالضغط",
-    category: "الصرف",
-  },
-  {
-    src: "/images/service-sofa.jpg",
-    alt: "غسيل مجالس وكنب بالبخار",
-    category: "المجالس والكنب",
-    tall: true,
-  },
-  {
-    src: "/images/after-sofa.jpg",
-    alt: "كنب بعد الغسيل العميق",
-    category: "المجالس والكنب",
-  },
-  {
-    src: "/images/service-floor.jpg",
-    alt: "تنظيف وتلميع أرضيات رخام",
-    category: "الأرضيات",
-  },
-];
+// سيتم إضافة صور الأعمال هنا واحدة واحدة حسب الصور التي يرفعها المستخدم.
+const ITEMS: GalleryItem[] = [];
 
 export default function Gallery() {
   const [active, setActive] = useState<Category>("الكل");
@@ -91,31 +59,33 @@ export default function Gallery() {
           ))}
         </Reveal>
 
-        <div className="mt-10 columns-1 gap-6 sm:columns-2 lg:columns-3 [&>figure]:mb-6">
-          {visible.map((item) => (
-            <figure
-              key={item.src + item.category}
-              className="group relative break-inside-avoid overflow-hidden rounded-2xl shadow-card"
-            >
-              <Image
-                src={item.src}
-                alt={item.alt}
-                width={800}
-                height={item.tall ? 1000 : 600}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className={`w-full object-cover transition-transform duration-700 group-hover:scale-[1.05] ${
-                  item.tall ? "aspect-[4/4.4]" : "aspect-[4/3]"
-                }`}
-              />
-              <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 bg-gradient-to-t from-brand-deep/85 via-brand-deep/30 to-transparent p-4 pt-12">
-                <span className="text-sm font-bold text-cream">{item.alt}</span>
-                <span className="shrink-0 rounded-full bg-accent/90 px-3 py-1 text-xs font-bold text-brand-ink">
-                  {item.category}
-                </span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+        {visible.length > 0 && (
+          <div className="mt-10 columns-1 gap-6 sm:columns-2 lg:columns-3 [&>figure]:mb-6">
+            {visible.map((item) => (
+              <figure
+                key={item.src + item.category}
+                className="group relative break-inside-avoid overflow-hidden rounded-2xl shadow-card"
+              >
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  width={800}
+                  height={item.tall ? 1000 : 600}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className={`w-full object-cover transition-transform duration-700 group-hover:scale-[1.05] ${
+                    item.tall ? "aspect-[4/4.4]" : "aspect-[4/3]"
+                  }`}
+                />
+                <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 bg-gradient-to-t from-brand-deep/85 via-brand-deep/30 to-transparent p-4 pt-12">
+                  <span className="text-sm font-bold text-cream">{item.alt}</span>
+                  <span className="shrink-0 rounded-full bg-accent/90 px-3 py-1 text-xs font-bold text-brand-ink">
+                    {item.category}
+                  </span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
