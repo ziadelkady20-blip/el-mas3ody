@@ -40,11 +40,11 @@ export default function Hero() {
           </div>
 
           <h1 className="mt-1 text-3xl font-bold leading-[1.3] text-brand md:text-4xl xl:text-[2.55rem]">
-            حلول متكاملة لنظافة وصيانة منزلك
+            حلول متكاملة لنظافة وصيانة وعزل منزلك
           </h1>
 
           <p className="mx-auto mt-5 max-w-xl text-base leading-8 text-brand-ink/75 md:text-lg lg:mx-0">
-            خدمات تنظيف وتعقيم وصيانة متخصصة بجودة عالية لنمنحك بيئة أنظف
+            خدمات تنظيف وتعقيم وصيانة وعزل متخصصة بجودة عالية لنمنحك بيئة أنظف
             وأكثر راحة وأمانًا في الرياض.
           </p>
 
