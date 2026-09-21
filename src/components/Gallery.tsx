@@ -35,6 +35,11 @@ const ITEMS: GalleryItem[] = [
     alt: "عزل الأسطح",
     category: "عزل الأسطح",
   },
+  {
+    src: "https://raw.githubusercontent.com/ziadelkady20-blip/el-mas3ody/main/images/image%2010.png",
+    alt: "غسيل المجالس والكنب",
+    category: "المجالس والكنب",
+  },
 ];
 
 export default function Gallery() {
