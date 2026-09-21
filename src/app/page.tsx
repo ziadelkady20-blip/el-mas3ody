@@ -10,6 +10,7 @@ import HowItWorks from "@/components/HowItWorks";
 import ServiceArea from "@/components/ServiceArea";
 import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
+import Reviews from "@/components/Reviews";
 
 export default function HomePage() {
   return (
@@ -20,6 +21,7 @@ export default function HomePage() {
         <Services />
         <WhyUs />
         <About />
+        <Reviews />
         <Gallery />
         <HowItWorks />
         <ServiceArea />
