@@ -29,10 +29,9 @@ export default function Hero() {
             نخدم مدينة الرياض
           </span>
 
-          <span className="mt-3 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-sm font-bold text-brand shadow-sm">
-            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-accent text-brand text-xs font-extrabold">32</span>
+          <a href="#about" className="mt-3 inline-flex items-center rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-sm font-bold text-brand shadow-sm transition-all hover:border-accent/60 hover:bg-accent/15 hover:-translate-y-0.5">
             خبرة منذ 32 سنة في الرياض
-          </span>
+          </a>
 
           <div className="relative mb-3 flex justify-center lg:justify-start">
             <div aria-hidden className="absolute inset-x-4 top-1/2 -z-10 h-24 -translate-y-1/2 rounded-full bg-accent/8 blur-2xl" />
