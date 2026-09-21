@@ -19,7 +19,7 @@ export type ServiceItem = {
   bullets?: string[];
   image: string;
   imageAlt: string;
-  icon: "tank" | "pest" | "drain" | "sofa" | "floor";
+  icon: "tank" | "pest" | "drain" | "sofa" | "floor" | "insulation";
 };
 
 export const SERVICES: ServiceItem[] = [
@@ -88,6 +88,22 @@ export const SERVICES: ServiceItem[] = [
     image: "https://raw.githubusercontent.com/ziadelkady20-blip/el-mas3ody/main/images/image%205.png?v=4165daa4",
     imageAlt: "جلي وتنظيف أرضيات رخام بجهاز تلميع احترافي",
     icon: "floor",
+  {
+    id: "insulation",
+    number: "06",
+    title: "عزل الأسطح",
+    shortTitle: "عزل الأسطح",
+    description:
+      "تنفيذ أعمال عزل الأسطح باحترافية للمساعدة في حماية السطح وتقليل تأثير العوامل الجوية والحفاظ على راحة المكان.",
+    bullets: [
+      "عزل الأسطح باحترافية",
+      "المساعدة في حماية السطح من العوامل الجوية",
+      "تنفيذ منظم يناسب احتياج الموقع",
+    ],
+    image: "",
+    imageAlt: "أعمال عزل الأسطح في الرياض",
+    icon: "insulation",
+  },
   },
 ];
 
@@ -114,7 +130,7 @@ export const WHY_ITEMS = [
   },
   {
     title: "حلول متكاملة",
-    text: "تنظيف وتعقيم وصيانة ومكافحة حشرات في مكان واحد.",
+    text: "تنظيف وتعقيم وصيانة ومكافحة حشرات وعزل أسطح في مكان واحد.",
     icon: "grid",
   },
   {
