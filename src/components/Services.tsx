@@ -18,6 +18,7 @@ const ICONS = {
   drain: DrainIcon,
   sofa: SofaIcon,
   floor: FloorIcon,
+  insulation: ShieldIcon,
 } as const;
 
 function CardCta({ dark = false }: { dark?: boolean }) {
@@ -47,7 +48,7 @@ function CardCta({ dark = false }: { dark?: boolean }) {
 }
 
 export default function Services() {
-  const [tanks, pest, drain, sofa, floor] = SERVICES;
+  const [tanks, pest, drain, sofa, floor, insulation] = SERVICES;
   const TankIco = ICONS[tanks.icon];
   const PestIco = ICONS[pest.icon];
   const DrainIco = ICONS[drain.icon];
@@ -61,7 +62,7 @@ export default function Services() {
             حلول متكاملة لمنزل أكثر نظافة وأمانًا
           </h2>
           <p className="mt-4 text-base leading-8 text-brand-ink/70">
-            خمس خدمات أساسية ننفذها باحترافية داخل الرياض، مرتبة حسب الأكثر طلبًا.
+            ست خدمات أساسية ننفذها باحترافية داخل الرياض، مرتبة حسب الأكثر طلبًا.
           </p>
         </Reveal>
 
@@ -110,20 +111,29 @@ export default function Services() {
 
         {/* ── Services 02 → 05 · Same featured layout ─────────── */}
         <div className="mt-8 grid gap-8">
-          {[pest, drain, sofa, floor].map((service, idx) => {
+          {[pest, drain, sofa, floor, insulation].map((service, idx) => {
             const Ico = ICONS[service.icon];
             const dark = service.id === "drain";
             return (
               <Reveal key={service.id} delay={idx * 80}>
                 <article className="group grid overflow-hidden rounded-[1.75rem] border border-beige/70 bg-cream-soft shadow-soft transition-shadow hover:shadow-lift lg:grid-cols-2">
                   <div className={`relative min-h-[260px] overflow-hidden lg:min-h-full ${idx % 2 === 1 ? "lg:order-2" : ""}`}>
-                    <Image
-                      src={service.image}
-                      alt={service.imageAlt}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                    />
+                    {service.image ? (
+                      <Image
+                        src={service.image}
+                        alt={service.imageAlt}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                      />
+                    ) : (
+                      <div className="flex h-full min-h-[260px] items-center justify-center bg-gradient-to-br from-brand/5 via-cream to-accent/10 px-8 text-center">
+                        <div>
+                          <ShieldIcon className="mx-auto h-14 w-14 text-brand/25" />
+                          <p className="mt-4 text-sm font-semibold text-brand/50">صورة الخدمة ستُضاف قريبًا</p>
+                        </div>
+                      </div>
+                    )}
                     {service.id === "drain" && <div aria-hidden className="absolute inset-0 bg-brand/8" />}
                   </div>
                   <div className={`flex flex-col p-7 md:p-10 ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
