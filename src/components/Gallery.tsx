@@ -24,7 +24,13 @@ type GalleryItem = {
 };
 
 // سيتم إضافة صور الأعمال هنا واحدة واحدة حسب الصور التي يرفعها المستخدم.
-const ITEMS: GalleryItem[] = [];
+const ITEMS: GalleryItem[] = [
+  {
+    src: "https://raw.githubusercontent.com/ziadelkady20-blip/el-mas3ody/main/images/image%208.png",
+    alt: "عزل وتنظيف وتعقيم الخزانات",
+    category: "الخزانات",
+  },
+];
 
 export default function Gallery() {
   const [active, setActive] = useState<Category>("الكل");
@@ -60,11 +66,14 @@ export default function Gallery() {
         </Reveal>
 
         {visible.length > 0 && (
-          <div className="mt-10 columns-1 gap-6 sm:columns-2 lg:columns-3 [&>figure]:mb-6">
+          <div
+            dir="rtl"
+            className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          >
             {visible.map((item) => (
               <figure
                 key={item.src + item.category}
-                className="group relative break-inside-avoid overflow-hidden rounded-2xl shadow-card"
+                className="group relative overflow-hidden rounded-2xl bg-cream-soft shadow-card"
               >
                 <Image
                   src={item.src}
@@ -72,7 +81,7 @@ export default function Gallery() {
                   width={800}
                   height={item.tall ? 1000 : 600}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className={`w-full object-cover transition-transform duration-700 group-hover:scale-[1.05] ${
+                  className={`w-full object-cover transition-transform duration-700 group-hover:scale-[1.04] ${
                     item.tall ? "aspect-[4/4.4]" : "aspect-[4/3]"
                   }`}
                 />
