@@ -11,6 +11,7 @@ const CATEGORIES = [
   "الصرف",
   "المجالس والكنب",
   "الأرضيات",
+  "عزل الأسطح",
 ] as const;
 
 type Category = (typeof CATEGORIES)[number];
@@ -22,10 +23,6 @@ type GalleryItem = {
   tall?: boolean;
 };
 
-/**
- * لتحديث المعرض لاحقًا: أضف الصورة إلى public/images
- * ثم أضف عنصرًا جديدًا هنا مع التصنيف المناسب.
- */
 const ITEMS: GalleryItem[] = [
   {
     src: "/images/service-tanks.jpg",
@@ -72,7 +69,7 @@ export default function Gallery() {
           <span className="text-sm font-bold tracking-widest text-accent">أعمالنا</span>
           <h2 className="mt-3 text-3xl font-bold text-brand md:text-4xl">من أعمالنا</h2>
           <p className="mt-4 text-base leading-8 text-brand-ink/70">
-            لمحات من خدماتنا في التنظيف والتعقيم والصيانة داخل الرياض.
+            لمحات من خدماتنا في التنظيف والتعقيم والصيانة والعزل داخل الرياض.
           </p>
         </Reveal>
 
