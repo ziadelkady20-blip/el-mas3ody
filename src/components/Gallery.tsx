@@ -40,6 +40,11 @@ const ITEMS: GalleryItem[] = [
     alt: "غسيل المجالس والكنب",
     category: "المجالس والكنب",
   },
+  {
+    src: "https://raw.githubusercontent.com/ziadelkady20-blip/el-mas3ody/main/images/image%2011.png",
+    alt: "رش المبيدات الحشرية",
+    category: "المبيدات",
+  },
 ];
 
 export default function Gallery() {
