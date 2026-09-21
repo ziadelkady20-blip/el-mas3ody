@@ -178,3 +178,12 @@ export function CloseIcon(props: IconProps) {
     </svg>
   );
 }
+
+
+export function StarIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className={className}>
+      <path d="m12 3 2.78 5.63 6.22.9-4.5 4.38 1.06 6.2L12 17.18l-5.56 2.93 1.06-6.2L3 9.53l6.22-.9L12 3Z" fill="currentColor" />
+    </svg>
+  );
+}
