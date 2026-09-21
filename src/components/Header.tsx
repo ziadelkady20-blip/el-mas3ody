@@ -40,6 +40,12 @@ export default function Header() {
       }`}
     >
       <div className="relative mx-auto flex max-w-7xl items-center justify-center gap-4 px-4 py-2 sm:px-6 lg:px-8">
+        <div className="absolute right-4 top-1/2 hidden -translate-y-1/2 items-center gap-2 rounded-full border border-accent/30 bg-white/80 px-4 py-2 shadow-sm backdrop-blur lg:flex">
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent/15 text-sm font-extrabold text-brand">32</span>
+          <span className="text-[13px] font-bold text-brand">خبرة منذ 32 سنة</span>
+          <span className="h-1 w-1 rounded-full bg-accent" />
+          <span className="text-[12px] font-semibold text-brand/70">في الرياض</span>
+        </div>
         {/* Desktop actions */}
         <div className="hidden items-center gap-2 lg:absolute lg:left-8 lg:top-1/2 lg:flex lg:-translate-y-1/2">
           <a
@@ -121,6 +127,13 @@ export default function Header() {
         }`}
       >
         <nav aria-label="قائمة الجوال" className="px-4 py-4 sm:px-6">
+          <div className="mb-3 flex items-center justify-center gap-2 rounded-2xl border border-accent/25 bg-white/70 px-4 py-3">
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent/15 text-sm font-extrabold text-brand">32</span>
+            <div className="text-center">
+              <p className="text-sm font-bold text-brand">خبرة منذ 32 سنة</p>
+              <p className="text-xs font-semibold text-brand/65">خدمة داخل الرياض</p>
+            </div>
+          </div>
           <ul className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
