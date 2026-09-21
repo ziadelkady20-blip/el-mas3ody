@@ -88,6 +88,7 @@ export const SERVICES: ServiceItem[] = [
     image: "https://raw.githubusercontent.com/ziadelkady20-blip/el-mas3ody/main/images/image%205.png?v=4165daa4",
     imageAlt: "جلي وتنظيف أرضيات رخام بجهاز تلميع احترافي",
     icon: "floor",
+  },
   {
     id: "insulation",
     number: "06",
@@ -103,7 +104,6 @@ export const SERVICES: ServiceItem[] = [
     image: "",
     imageAlt: "أعمال عزل الأسطح في الرياض",
     icon: "insulation",
-  },
   },
 ];
 
