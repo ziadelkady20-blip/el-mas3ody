@@ -45,6 +45,11 @@ const ITEMS: GalleryItem[] = [
     alt: "رش المبيدات الحشرية",
     category: "المبيدات",
   },
+  {
+    src: "https://raw.githubusercontent.com/ziadelkady20-blip/el-mas3ody/main/images/image%2012.png",
+    alt: "حل مشكلة انسداد الصرف وتعقيم المواسير",
+    category: "الصرف",
+  },
 ];
 
 export default function Gallery() {
