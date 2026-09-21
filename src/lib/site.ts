@@ -101,8 +101,8 @@ export const SERVICES: ServiceItem[] = [
       "المساعدة في حماية السطح من العوامل الجوية",
       "تنفيذ منظم يناسب احتياج الموقع",
     ],
-    image: "",
-    imageAlt: "أعمال عزل الأسطح في الرياض",
+    image: "https://raw.githubusercontent.com/ziadelkady20-blip/el-mas3ody/main/images/image%207.png?v=11f5f31e",
+    imageAlt: "فريق المسعودي ينفذ أعمال عزل الأسطح في الرياض",
     icon: "insulation",
   },
 ];
