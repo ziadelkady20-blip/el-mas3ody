@@ -30,6 +30,11 @@ const ITEMS: GalleryItem[] = [
     alt: "عزل وتنظيف وتعقيم الخزانات",
     category: "الخزانات",
   },
+  {
+    src: "https://raw.githubusercontent.com/ziadelkady20-blip/el-mas3ody/main/images/image%209.png",
+    alt: "عزل الأسطح",
+    category: "عزل الأسطح",
+  },
 ];
 
 export default function Gallery() {
