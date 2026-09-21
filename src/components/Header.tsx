@@ -41,10 +41,7 @@ export default function Header() {
     >
       <div className="relative mx-auto flex max-w-7xl items-center justify-center gap-4 px-4 py-2 sm:px-6 lg:px-8">
         <div className="absolute right-4 top-1/2 hidden -translate-y-1/2 items-center gap-2 rounded-full border border-accent/30 bg-white/80 px-4 py-2 shadow-sm backdrop-blur lg:flex">
-          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent/15 text-sm font-extrabold text-brand">32</span>
-          <span className="text-[13px] font-bold text-brand">خبرة منذ 32 سنة</span>
-          <span className="h-1 w-1 rounded-full bg-accent" />
-          <span className="text-[12px] font-semibold text-brand/70">في الرياض</span>
+          <span className="text-[13px] font-bold text-brand">خبرة منذ 32 سنة في الرياض</span>
         </div>
         {/* Desktop actions */}
         <div className="hidden items-center gap-2 lg:absolute lg:left-8 lg:top-1/2 lg:flex lg:-translate-y-1/2">
