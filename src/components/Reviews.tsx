@@ -36,7 +36,6 @@ const REVIEWS: Review[] = [
   { name: "Fahd", text: "سبق أن قيّمت مؤسسة منزل الدقة بالعمل المميز وتنفيذ الأعمال بأمانة ودقة وتعامل راقٍ منهم.", rating: "ممتاز" },
   { name: "Ahmed", text: "محترمين وشغل احترافي وخدمة وأمانة وإتقان.", rating: "ممتاز" },
   { name: "Mojahid", text: "مجهود رائع من أبو أحمد وفريقه.", rating: "ممتاز" },
-  { name: "مساعد البلوي", text: "تقييم جيد.", rating: "جيد" },
 ];
 
 export default function Reviews() {
