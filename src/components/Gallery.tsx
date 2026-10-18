@@ -50,6 +50,12 @@ const ITEMS: GalleryItem[] = [
     alt: "حل مشكلة انسداد الصرف وتعقيم المواسير",
     category: "الصرف",
   },
+  {
+    src: "https://raw.githubusercontent.com/ziadelkady20-blip/el-mas3ody/main/images/ChatGPT%20Image%20Oct%2018%2C%202026%2C%2008_29_44%20PM.png",
+    alt: "تنظيف وتلميع الأرضيات",
+    category: "الأرضيات",
+    tall: true,
+  },
 ];
 
 export default function Gallery() {
